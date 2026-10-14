@@ -1,9 +1,6 @@
-CREATE TABLE dbo.Person ( 
-    PersonID INT IDENTITY(1,1) PRIMARY KEY, 
-    FirstName NVARCHAR(50) NOT NULL, 
-    LastName NVARCHAR(50) NOT NULL, 
-    DateOfBirth DATE NULL, 
-    Email NVARCHAR(100) NULL, 
-    PhoneNumber NVARCHAR(20) NULL, 
-    CreatedAt DATETIME2 DEFAULT GETDATE() 
-)
+CREATE TABLE dim.products ( 
+    ProductID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName NVARCHAR(255) NOT NULL,
+    Category NVARCHAR(100), 
+    Price DECIMAL(10,2) NOT NULL 
+);
